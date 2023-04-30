@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { toast } from "react-hot-toast";
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -32,9 +32,10 @@ const Login = () => {
       }
     );
     const data = await response.json();
-    console.log("access token", data);
+
     if (data) {
       setIsLoggedin(true);
+      toast.success("Logged in successfully!!");
     }
   };
 
