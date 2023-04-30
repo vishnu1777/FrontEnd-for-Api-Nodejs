@@ -36,6 +36,8 @@ const Login = () => {
     if (data) {
       setIsLoggedin(true);
       toast.success("Logged in successfully!!");
+    } else {
+      toast.error("Oops something went wrong!!");
     }
   };
 
